@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoCellId" id="KGk-i7-Jjw" customClass="EssenceVideoCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCellId" id="KGk-i7-Jjw" customClass="EssenceImageCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -52,7 +52,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ctn-cR-I09" userLabel="videoImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ctn-cR-I09" userLabel="bigImageView">
                                 <rect key="frame" x="10" y="79" width="355" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="Bjn-p1-jL4"/>
@@ -194,37 +194,6 @@
                                     <action selector="commentAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gqW-q5-wwb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25G-YZ-44a">
-                                <rect key="frame" x="158" y="109" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="dpO-Iw-Xna"/>
-                                    <constraint firstAttribute="width" constant="60" id="jIu-cb-EA4"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="video-play.png"/>
-                                <connections>
-                                    <action selector="playAction" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HcZ-0C-XVt"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noh-OG-iwf" userLabel="playNumLabel">
-                                <rect key="frame" x="14" y="175" width="120" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="AMX-eS-Lza"/>
-                                    <constraint firstAttribute="width" constant="120" id="urG-zO-Viz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA4-Xr-KnJ" userLabel="playTimeLabel">
-                                <rect key="frame" x="301" y="175" width="60" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="27q-8a-Rck"/>
-                                    <constraint firstAttribute="width" constant="60" id="eTc-jm-Qfu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -232,8 +201,6 @@
                             <constraint firstItem="ZlB-sX-ipN" firstAttribute="leading" secondItem="Hjf-4f-J6u" secondAttribute="trailing" id="1h1-ys-kMD"/>
                             <constraint firstItem="ppb-1y-Jco" firstAttribute="top" secondItem="0Ic-Yo-6IF" secondAttribute="bottom" id="5R8-O5-sWZ"/>
                             <constraint firstAttribute="trailing" secondItem="ppb-1y-Jco" secondAttribute="trailing" constant="20" id="8f4-8B-3CR"/>
-                            <constraint firstItem="WYC-Nu-xZQ" firstAttribute="top" secondItem="wA4-Xr-KnJ" secondAttribute="bottom" constant="14" id="Ddl-XR-08o"/>
-                            <constraint firstAttribute="trailing" secondItem="wA4-Xr-KnJ" secondAttribute="trailing" constant="14" id="E9w-V6-jKd"/>
                             <constraint firstItem="Hjf-4f-J6u" firstAttribute="top" secondItem="6nS-Yw-T1U" secondAttribute="bottom" constant="10" id="EHE-Sf-FCc"/>
                             <constraint firstItem="x7q-aL-A3V" firstAttribute="leading" secondItem="ppb-1y-Jco" secondAttribute="trailing" constant="20" id="GnP-kt-p3W"/>
                             <constraint firstItem="WYC-Nu-xZQ" firstAttribute="leading" secondItem="FM4-Gu-LE2" secondAttribute="leading" constant="10" id="NQM-a2-ANM"/>
@@ -248,7 +215,6 @@
                             <constraint firstItem="ZlB-sX-ipN" firstAttribute="top" secondItem="6nS-Yw-T1U" secondAttribute="bottom" constant="10" id="YKo-ri-gfX"/>
                             <constraint firstItem="ggG-1d-dQU" firstAttribute="width" secondItem="Hjf-4f-J6u" secondAttribute="width" id="aCs-zx-xu2"/>
                             <constraint firstItem="ZlB-sX-ipN" firstAttribute="width" secondItem="Hjf-4f-J6u" secondAttribute="width" id="aDg-p0-4N8"/>
-                            <constraint firstItem="25G-YZ-44a" firstAttribute="centerY" secondItem="Ctn-cR-I09" secondAttribute="centerY" id="bpZ-7k-yxL"/>
                             <constraint firstItem="0Ic-Yo-6IF" firstAttribute="leading" secondItem="zsv-Ag-ZqP" secondAttribute="trailing" constant="20" id="dcO-cM-zBW"/>
                             <constraint firstAttribute="trailing" secondItem="WYC-Nu-xZQ" secondAttribute="trailing" constant="10" id="dhq-Du-BYr"/>
                             <constraint firstItem="Hjf-4f-J6u" firstAttribute="leading" secondItem="FM4-Gu-LE2" secondAttribute="leading" constant="10" id="f6e-8F-XiM"/>
@@ -263,14 +229,11 @@
                             <constraint firstItem="CGx-Os-SRH" firstAttribute="width" secondItem="Hjf-4f-J6u" secondAttribute="width" id="lMM-bR-V4r"/>
                             <constraint firstItem="Ctn-cR-I09" firstAttribute="top" secondItem="Zaz-oK-2cu" secondAttribute="bottom" constant="10" id="nnj-jf-5Qq"/>
                             <constraint firstAttribute="trailing" secondItem="6nS-Yw-T1U" secondAttribute="trailing" constant="10" id="r5u-gU-pbT"/>
-                            <constraint firstItem="Noh-OG-iwf" firstAttribute="leading" secondItem="FM4-Gu-LE2" secondAttribute="leading" constant="14" id="tKi-Pg-ptM"/>
                             <constraint firstItem="CGx-Os-SRH" firstAttribute="leading" secondItem="ggG-1d-dQU" secondAttribute="trailing" id="tqH-pI-uqb"/>
                             <constraint firstItem="zsv-Ag-ZqP" firstAttribute="leading" secondItem="FM4-Gu-LE2" secondAttribute="leading" constant="10" id="udG-cx-1ji"/>
-                            <constraint firstItem="25G-YZ-44a" firstAttribute="centerX" secondItem="Ctn-cR-I09" secondAttribute="centerX" id="vjD-3p-Utm"/>
                             <constraint firstItem="ggG-1d-dQU" firstAttribute="leading" secondItem="ZlB-sX-ipN" secondAttribute="trailing" id="wak-D7-FeE"/>
                             <constraint firstAttribute="trailing" secondItem="CGx-Os-SRH" secondAttribute="trailing" constant="10" id="wia-zC-ndB"/>
                             <constraint firstAttribute="trailing" secondItem="x7q-aL-A3V" secondAttribute="trailing" constant="10" id="xWQ-RY-Dqt"/>
-                            <constraint firstItem="WYC-Nu-xZQ" firstAttribute="top" secondItem="Noh-OG-iwf" secondAttribute="bottom" constant="14" id="yaa-0m-5tC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -290,6 +253,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bigImageView" destination="Ctn-cR-I09" id="O9q-5m-iW7"/>
                 <outlet property="caiButton" destination="ZlB-sX-ipN" id="a8r-Fs-UUM"/>
                 <outlet property="clikMoreBtn" destination="x7q-aL-A3V" id="oHj-cu-gdB"/>
                 <outlet property="commentButton" destination="CGx-Os-SRH" id="eYU-5Z-qfa"/>
@@ -300,13 +264,10 @@
                 <outlet property="dingButton" destination="Hjf-4f-J6u" id="MZ4-bt-7hr"/>
                 <outlet property="imageHCons" destination="Bjn-p1-jL4" id="5CJ-89-WYo"/>
                 <outlet property="passTimeLabel" destination="ppb-1y-Jco" id="Ogg-5h-cAM"/>
-                <outlet property="playNumLabel" destination="Noh-OG-iwf" id="xV8-7Z-Tgd"/>
-                <outlet property="playTimeLabel" destination="wA4-Xr-KnJ" id="ieC-cs-S5v"/>
                 <outlet property="shareButton" destination="ggG-1d-dQU" id="4ph-ZR-JN2"/>
                 <outlet property="tagLabel" destination="jCB-QS-mkR" id="Rfb-Ej-SZz"/>
                 <outlet property="userImageView" destination="zsv-Ag-ZqP" id="zKX-fu-J9e"/>
                 <outlet property="userNameLabel" destination="0Ic-Yo-6IF" id="woJ-I8-pKC"/>
-                <outlet property="videoImageView" destination="Ctn-cR-I09" id="aY2-F6-Gx9"/>
             </connections>
             <point key="canvasLocation" x="279.5" y="274"/>
         </tableViewCell>
@@ -321,6 +282,5 @@
         <image name="mainCellShare.png" width="20" height="20"/>
         <image name="mainCellShareClick.png" width="23" height="23"/>
         <image name="tagicon.png" width="15" height="15"/>
-        <image name="video-play.png" width="71" height="71"/>
     </resources>
 </document>

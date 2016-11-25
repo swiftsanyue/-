@@ -34,6 +34,7 @@
 
 @end
 
+
 @implementation BDJEssenceComment
 
 + (JSONKeyMapper *)keyMapper {
@@ -42,14 +43,22 @@
 
 @end
 
+
 @implementation BDJEssenceUser
 
 @end
 
+
 @implementation BDJEssenceVideo
-
-
 
 @end
 
+
+@implementation BDJEssenceImage
+
+@end
+
+@implementation BDJEssenceAudio
+
+@end
 

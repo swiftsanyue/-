@@ -10,6 +10,7 @@
 #import "BDJTabBar.h"
 #import "BDJMenu.h"
 #import "EssenceViewController.h"
+#import "NewsViewController.h"
 
 
 @interface BDJTabBarController ()
@@ -21,8 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //修改tabBar背景颜色
-//    self.tabBar.barTintColor = [UIColor colorWithWhite:64.0f/255.0f alpha:1.0f];
-//    self.tabBar.tintColor = [UIColor colorWithWhite:64.0f/255.0f alpha:1.0f];
+    //    self.tabBar.barTintColor = [UIColor colorWithWhite:64.0f/255.0f alpha:1.0f];
+    //    self.tabBar.tintColor = [UIColor colorWithWhite:64.0f/255.0f alpha:1.0f];
     //修改全部颜色
     [UITabBar appearance].tintColor = [UIColor colorWithWhite:64.0f/255.0f alpha:1.0f];
     
@@ -74,7 +75,7 @@
         if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
             [self showAllMenuData:menu];
         }
-
+        
         //存到本地
         [data writeToFile:path atomically:YES];
         
@@ -99,6 +100,16 @@
     EssenceViewController *essenceCtrl = [essenceNavCtrl.viewControllers firstObject];
     
     essenceCtrl.subMenus = [[menu.menus firstObject] submenus];
+    
+    //设置最新的界面菜单数据
+    if (self.viewControllers.count >= 2) {
+        UINavigationController *newsNavCtrl = self.viewControllers[1];
+        NewsViewController *newsCtrl = [newsNavCtrl.viewControllers firstObject];
+        if (menu.menus.count >= 2) {
+            newsCtrl.subMenus = [menu.menus[1] submenus];
+        }
+    }
+    
     
     
 }
@@ -150,13 +161,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
