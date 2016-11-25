@@ -2,11 +2,17 @@
 //  AppDelegate.m
 //  百思不得姐
 //
-//  Created by qianfeng on 16/11/21.
+//  Created by ZL on 16/11/21.
 //  Copyright © 2016年 ZL. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "BDJTabBarController.h"
+
+/*
+ Xcode常用的一些插件的使用
+ http://www.jianshu.com/p/7a2484123bf6
+ */
 
 @interface AppDelegate ()
 
@@ -16,7 +22,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window.rootViewController = [[BDJTabBarController alloc] init];
+    
     return YES;
 }
 
