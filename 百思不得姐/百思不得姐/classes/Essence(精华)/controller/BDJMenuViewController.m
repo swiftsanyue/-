@@ -25,6 +25,8 @@
 //菜单视图
 @property (nonatomic, strong)BDJMenuView *menuView;
 
+
+
 @end
 
 @implementation BDJMenuViewController
@@ -40,6 +42,7 @@
 - (void)setSubMenus:(NSArray *)subMenus {
     
     _subMenus = subMenus;
+    
     
     //循环创建视图控制器
     for (BDJSubMenu *subMenu in subMenus) {
