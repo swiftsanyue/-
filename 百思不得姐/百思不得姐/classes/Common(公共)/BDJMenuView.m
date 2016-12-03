@@ -211,6 +211,7 @@
 
 //切换选中状态
 - (void)setClicked:(BOOL)clicked {
+    //这样只是赋值，不调用set方法
     _clicked = clicked;
     
     if (_clicked) {

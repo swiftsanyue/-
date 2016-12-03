@@ -95,18 +95,18 @@
     
     //8.神评文字
     if (detailModel.top_comments.count > 0) {
-    BDJEssenceComment *comment = [detailModel.top_comments firstObject];
-    self.commentLabel.text = comment.content;
+        BDJEssenceComment *comment = [detailModel.top_comments firstObject];
+        self.commentLabel.text = comment.content;
     }else {
         self.commentLabel.text = nil;
     }
-
+    
     //强制cell布局一次
     [self layoutIfNeeded];
     
     //修改评论视图的约束
     if (detailModel.top_comments.count > 0) {
-
+        
         self.commentViewYCons.constant = 10;
         self.commentViewHCons.constant = self.commentLabel.frame.size.height + 10 +10;
         
@@ -170,7 +170,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

@@ -65,7 +65,7 @@
     //http://s.budejie.com/public/list-appbar/bs0315-iphone-4.3/
     
     [BDJDownloader downloadWithURLString:@"http://s.budejie.com/public/list-appbar/bs0315-iphone-4.3/" success:^(NSData *data) {
-        
+        NSLog(@"====");
         //解析
         BDJMenu * menu = [[BDJMenu alloc] initWithData:data error:nil];
         
@@ -109,9 +109,6 @@
             newsCtrl.subMenus = [menu.menus[1] submenus];
         }
     }
-    
-    
-    
 }
 
 //创建视图控制器

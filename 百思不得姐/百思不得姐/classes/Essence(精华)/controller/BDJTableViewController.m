@@ -86,7 +86,7 @@
     [ProgressHUD show:@"正在下载" Interaction:NO];
     
     NSString *urlString = [NSString stringWithFormat:@"%@/bs0315-iphone-4.3/%@-20.json", self.url,self.np];
-    NSLog(@"%@",urlString);
+    
     [BDJDownloader downloadWithURLString:urlString success:^(NSData *data) {
         NSError *error = nil;
         BDJEssenceModel *model = [[BDJEssenceModel alloc] initWithData:data error:&error];
